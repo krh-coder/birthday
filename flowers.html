@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>May the force be with you</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Confetti Library -->
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+</head>
+
+<body class="flower-page">
+
+    <h1>Just For You 🌸</h1>
+
+    <video autoplay muted playsinline controls class="bloom-video">
+        <source src="bloom.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <h2>May your day bloom with happiness 💐</h2>
+    <h2>Happy Birthday Darth Veda 🎉</h2>
+
+    <script>
+        window.onload = function () {
+
+            // Big burst in the center
+            confetti({
+                particleCount: 200,
+                spread: 180,
+                origin: { y: 0.6 }
+            });
+
+            // Continue confetti for 5 seconds
+            var duration = 1000;
+            var end = Date.now() + duration;
+
+            (function frame() {
+                confetti({
+                    particleCount: 4,
+                    angle: 60,
+                    spread: 55,
+                    origin: { x: 0 }
+                });
+
+                confetti({
+                    particleCount: 4,
+                    angle: 120,
+                    spread: 55,
+                    origin: { x: 1 }
+                });
+
+                if (Date.now() < end) {
+                    requestAnimationFrame(frame);
+                }
+            }());
+        };
+    </script>
+
+</body>
+</html>

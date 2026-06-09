@@ -1,0 +1,94 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+/* First page */
+.gift-page {
+    height: 100vh;
+    background: linear-gradient(to bottom, #ffe6f2, #ffffff);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-picture {
+    width: min(90vw, 800px);
+    height: auto;
+    margin-bottom: 20px;
+}
+
+/* Gift text */
+.gift-page h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+.gift-page p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+/* Gift image */
+.gift {
+    width: 40%;
+    max-width: 500px;
+    cursor: pointer;
+    animation: bounceSmall 1.2s infinite alternate ease-in-out;
+}
+
+/* Slight grow on hover */
+.gift:hover {
+    scale: 1.05;
+}
+
+/* Smaller bounce animation */
+@keyframes bounceSmall {
+    from {
+        transform: translateY(0);
+    }
+
+    to {
+        transform: translateY(-10px);
+    }
+}
+
+/* Second page */
+.flower-page {
+    min-height: 100vh;
+    background: linear-gradient(to bottom, #fffaf5, #ffe6f2);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Flower page heading */
+.flower-page h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* Video */
+.bloom-video {
+    width: 80%;
+    max-width: 700px;
+    border-radius: 20px;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.25);
+}
+
+/* Final message */
+.flower-page h2 {
+    margin-top: 25px;
+    font-size: 28px;
+    color: #8b005d;
+}
+@media (max-width: 768px) {
+    .top-picture {
+        width: 98%;
+    }
+}
